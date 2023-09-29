@@ -8,7 +8,7 @@ interface pageProps {
   params: { id: string };
 }
 
-const page: FC<pageProps> = ({ params }) => {
+const EachHospital: FC<pageProps> = ({ params }) => {
   const router = useRouter();
   const { user }: any = useAuth();
 
@@ -24,4 +24,4 @@ const page: FC<pageProps> = ({ params }) => {
   );
 };
 
-export default page;
+export default EachHospital;

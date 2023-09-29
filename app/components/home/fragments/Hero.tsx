@@ -27,7 +27,7 @@ export const Hero = () => {
             className={`lg:${noto.className} lg:text-xl 4xl:text-3xl 2xl:text-2xl  text-base font-medium lg:font-normal leading-[1.6875rem] lg:leading-8 4xl:leading-[3rem] 2xl:leading-[2rem] tracking-[-0.011rem] mt-5 lg:tracking-[-0.02rem] 4xl:tracking-[-0.03rem] 2xl:tracking-[-0.02rem] `}
           >
             Are you a patient struggling to find a good hospital to
-            get treatment? Or perhaps you&lsquo;re new in a location{" "}
+            get treatment? Or perhaps {"you're"} new in a location{" "}
             and can't find a hospital for checkups?
           </p>
           <p

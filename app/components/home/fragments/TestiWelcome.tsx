@@ -10,7 +10,7 @@ const TestiWelcome = () => {
       duration: 800,
       once: false,
     });
-  }, [AOS]);
+  });
   return (
     <div>
       <div className="lg:pt-20 lg:pb-4 pt-12 pb-0 text-center flex flex-col items-start 2xl:mt-[6.5rem] 4xl:mt-[7.5rem] 2xl:mb-6 px-4">

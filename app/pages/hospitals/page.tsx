@@ -120,10 +120,10 @@ const Hospitals = () => {
             <tbody className="">
               {sortedHospitals
                 ?.slice(currentPage, slicer)
-                .map((hospital: any, index: any) => (
+                .map((hospital: any, index) => (
                   <tr
+                  key={index}
                     className={`py-5 lg:px-6 px-5 2xl:py-[1.9rem] 2xl:px-8  border-b border-custom-dark-blue`}
-                    key={hospital.id}
                   >
                     {/* <div className="flex gap-3 2xl:gap-6 items-start cursor-pointer"> */}
                     <td className=" text-lg md:text-xl 2xl:text-4xl">

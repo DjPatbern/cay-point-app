@@ -12,7 +12,7 @@ export const Header: FC = () => {
     if (user) {
       setIsAuth(true);
     }
-  }, [isAuth]);
+  }, [isAuth,user]);
 
   
 

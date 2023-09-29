@@ -10,7 +10,7 @@ const HowItWork = () => {
       duration: 800,
       once: false,
     });
-  }, [AOS]);
+  });
   return (
     <div className="  w-full  py-10 md:py-[72px] lg:px-20 px-4  4xl:px-[7.5rem] 2xl:px-[6.5rem] 4xl:py-[6.75rem] 2xl:py-[5.75rem]">
       <div className="md:flex max-w-[156.25rem] m-auto justify-between items-start xl:gap-0 sm:gap-14 ">

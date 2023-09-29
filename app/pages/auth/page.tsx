@@ -5,7 +5,7 @@ import { useAuth } from '@/app/context/Auth';
 import { useRouter } from 'next/navigation';
 import React, { useEffect } from 'react'
 
-const page = () => {
+const Auth = () => {
   const router = useRouter();
   const { user }: any = useAuth();
 
@@ -27,4 +27,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Auth

@@ -15,7 +15,7 @@ const TestiComp: React.FC<TestiCompProps> = ({ testiName, testiImage }) => {
       duration: 800,
       once: false,
     });
-  }, [AOS]);
+  });
   return (
     <div className="md:flex justify-between md:gap-20 gap-8">
       <div className="text-left w-full ">

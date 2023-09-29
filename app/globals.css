@@ -2,26 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* loading css */
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #04304B;
+  border-color: #04304B transparent #04304B transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+
+
+/* NEWSLETTER CHECK INPUT CSS */
+.policy-check input[type="radio"] {
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #3e3e3e;
+    border-radius: 50%;
+    background-clip: content-box;
+  
+    background-color: white;
+  }
+  
+  .policy-check input[type="radio"]:checked {
+    background-color: #04304B;
+    padding: 5px;
+  }
+
+  @media only screen and (max-width: 376px) and (min-width: 320px) {
+  
+    .policy-check label {
+      font-size: 15px;
+    }
+  
+    .policy-check input[type="radio"] {
+      width: 20px;
+      height: 20px;
+    }
+  
+   
+  }
+
+@media only screen and (max-width: 321px) and (min-width: 200px) {
+    .btn-div {
+      gap: 5px;
+    }
+    .sm-btn {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  
+    .sm-box {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  
+    .sm-box-view {
+      display: block;
+    }
+  
+    .sm-pop-text {
+      width: 251px;
+    }
+  
+    .sm-foot {
+      width: auto;
+    }
+  
+    .div-text-play {
+      font-size: 15px /* 14px */;
+      line-height: 22px /* 20px */;
+    }
+  
+    .create-img {
+      width: 3.8rem;
+    }
+  
+    .create-btn {
+      padding: 6px 14px;
+      font-size: 12px;
+    }
+    .sign-up-btn {
+      padding-left: 0.7rem;
+      padding-right: 0.7rem;
+    }
+  
+    .explore-div {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  
+    .explore-text {
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .policy-check input[type="radio"] {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .policy-check input[type="radio"]:checked {
+      padding: 7.5px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .policy-check input[type="radio"] {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }

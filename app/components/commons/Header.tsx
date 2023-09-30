@@ -1,5 +1,6 @@
 "use client";
 import { useAuth } from "@/app/context/Auth";
+import Image from "next/image";
 import Link from "next/link";
 import { FC, useState, useEffect } from "react";
 import { GiHospitalCross } from "react-icons/gi";
@@ -12,9 +13,7 @@ export const Header: FC = () => {
     if (user) {
       setIsAuth(true);
     }
-  }, [isAuth,user]);
-
-  
+  }, [isAuth, user]);
 
   return (
     <div className="flex justify-between items-end border-[#d3f0fc] border-b w-full py-5 4xl:py-[2.5rem] 2xl:py-[1.5rem] lg:px-20 px-4 4xl:px-[7.5rem] 2xl:px-[6.5rem]">
@@ -42,10 +41,18 @@ export const Header: FC = () => {
                 setIsAuth(false);
                 location.reload();
               }}
-              className="text-custom-dark-blue whitebtn py-[2px] md:py-2 px-[10px] md:px-8 create-btn 2xl:px-12 2xl:py-3 md:text-lg md:flex items-center  2xl:gap-6 text-sm font-semibold leading-8 tracking-[-0.01575rem] 2xl:text-[1.688rem] 2xl:leading-[3rem] 2xl:tracking-[-0.02rem] 2xl:rounded-full  bg-[#d3f0fc] rounded-2xl"
+              className="text-custom-dark-blue gap-2 flex  whitebtn py-[2px] md:py-2 px-[10px] md:px-8 create-btn 2xl:px-12 2xl:py-3 md:text-lg md:flex items-center  2xl:gap-6 text-sm font-semibold leading-8 tracking-[-0.01575rem] 2xl:text-[1.688rem] 2xl:leading-[3rem] 2xl:tracking-[-0.02rem] 2xl:rounded-full  bg-[#d3f0fc] rounded-2xl"
             >
               <p>Logout</p>{" "}
-              
+              {user?.photoURL && (
+                <Image
+                  width={28}
+                  height={28}
+                  className="rounded-full hidden md:block"
+                  src={user?.photoURL}
+                  alt="profile pic"
+                />
+              )}
             </button>
           ) : (
             <Link

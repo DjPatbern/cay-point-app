@@ -166,7 +166,7 @@ const Hospitals = () => {
               <AiOutlineLeft />
             </button>
             {pageNumbers.map((pageNumber) => (
-              <div className="hidden md:block">
+              <div className="hidden md:block" key={pageNumber}>
                 {pageNumber > 0 && (
                   <button
                     className={`mr-5 ${
